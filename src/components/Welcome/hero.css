@@ -174,12 +174,15 @@
 }
 
 /* Footer */
-.hero .footer {
-    margin-top: auto; /* Push footer to the bottom */
-    display: flex;
-    justify-content: center; /* Center horizontally */
+.hero #foot  {
+    font-size: 0.8rem; /* Font size */
+    margin: 0; /* Remove default margins */
+    text-align: center; /* Center text horizontally */
+    display: flex; /* Use flexbox for centering */
     align-items: center; /* Center vertically */
-    height: 1.8rem; /* Adjust height as needed */
+    justify-content: center; /* Center horizontally */
+    letter-spacing: 0.8px; /* Letter spacing */
+    word-spacing: 0.26rem; /* Word spacing */
     background-color: rgb(17, 17, 63); /* Background color */
 }
 
