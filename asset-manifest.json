@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/CodeWizard/static/css/main.96da687b.css",
-    "main.js": "/CodeWizard/static/js/main.10ffdfa5.js",
+    "main.js": "/CodeWizard/static/js/main.01978b8b.js",
     "static/js/453.9671fad4.chunk.js": "/CodeWizard/static/js/453.9671fad4.chunk.js",
     "static/media/datta.png": "/CodeWizard/static/media/datta.2d24906682d870d0db90.png",
     "static/media/sami.png": "/CodeWizard/static/media/sami.f3df846f931facf05120.png",
@@ -9,11 +9,11 @@
     "static/media/cw.png": "/CodeWizard/static/media/cw.58bee007e14339193ab4.png",
     "index.html": "/CodeWizard/index.html",
     "main.96da687b.css.map": "/CodeWizard/static/css/main.96da687b.css.map",
-    "main.10ffdfa5.js.map": "/CodeWizard/static/js/main.10ffdfa5.js.map",
+    "main.01978b8b.js.map": "/CodeWizard/static/js/main.01978b8b.js.map",
     "453.9671fad4.chunk.js.map": "/CodeWizard/static/js/453.9671fad4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.96da687b.css",
-    "static/js/main.10ffdfa5.js"
+    "static/js/main.01978b8b.js"
   ]
 }
