@@ -11,7 +11,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Router>
+      {/* Set the basename for the Router to match your GitHub Pages path */}
+      <Router basename="/CodeWizard">
         <App />
       </Router>
     </Provider>

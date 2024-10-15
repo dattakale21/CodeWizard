@@ -17,10 +17,10 @@ const Navbar = () => {
 
                 {/* Menu Links in the center */}
                 <div className="flex-grow hidden md:flex justify-center space-x-8">
-                    <Link to="/" className="text-gray-300 hover:text-white">Home</Link>
-                    <Link to="/about" className="text-gray-300 hover:text-white">About</Link>
-                    <Link to="/contact" className="text-gray-300 hover:text-white">Contact</Link>
-                    <Link to="/Developers" className="text-gray-300 hover:text-white">Developers</Link>
+                    <Link to="/CodeWizard/home" className="text-gray-300 hover:text-white">Home</Link>
+                    <Link to="/CodeWizard/about" className="text-gray-300 hover:text-white">About</Link>
+                    <Link to="/CodeWizard/contact" className="text-gray-300 hover:text-white">Contact</Link>
+                    <Link to="/CodeWizard/Developers" className="text-gray-300 hover:text-white">Developers</Link>
                 </div>
 
                 {/* Sign In button on the right */}
