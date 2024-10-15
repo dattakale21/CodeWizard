@@ -19,6 +19,7 @@ const App = () => {
         <Route path="/home" element={<Home />} /> {/* Home Page after login */}
         <Route path="/developers" element={<Developers />} />
         <Route path="/compiler" element={<Compiler />} /> {/* Compiler Page */}
+        {/* <Route path="*" element={<NotFound />} /> // Add this route at the end */}
       </Routes>
     </div>
   );
