@@ -16,7 +16,7 @@ const HeroSection = () => {
                     A New Way to Learn
                 </h1>
                 <p className="title text-gray-300 text-xl mb-8 max-w-2xl mx-auto">
-    CodeWizards is the best platform to help you enhance your skills, expand your knowledge, and prepare for Placements.
+    CodeWizard is the best platform to help you enhance your skills, expand your knowledge, and prepare for Placements.
 </p>
                 {/* Call to Action Button */}
                 <Link to="/signup"
@@ -29,8 +29,8 @@ const HeroSection = () => {
             </div>
             <footer className="footer bg-gray-800 text-white w-full h-12">
                 <p id="foot" className="text-center">
-                    Copyright © 2024 CodeWizards. All rights reserved |
-                    <span style={{ margin: '0 5px' }}>Developed with ❤️ by CodeWizards Team.</span>
+                    Copyright © 2024 CodeWizard. All rights reserved |
+                    <span style={{ margin: '0 5px' }}>Developed with ❤️ by CodeWizard Team.</span>
                 </p>
             </footer>
         </section>

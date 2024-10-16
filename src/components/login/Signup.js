@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './Signup.css';
 import Swal from 'sweetalert2';
 import logo from './cw.png';
+import tick from './tick.png';
+import cross from './cross.png';
 import {
   auth,
   googleProvider,
@@ -35,6 +37,9 @@ const Signup = () => {
     if (password.length < 8) {
       return ["Password must be at least 8 characters long."];
     }
+    if (!/[A-Z]/.test(password)) { // Check for at least one uppercase letter
+      errors.push("Must include at least 1 uppercase letter.");
+    }
     if (!/[!@#$%^&*]/.test(password)) {
       return ["Must include at least 1 special character."];
     }
@@ -64,11 +69,14 @@ const Signup = () => {
     try {
       setLoading(true);
       await createUserWithEmailAndPassword(auth, email, password);
-      Swal.fire({
+      window.Swal.fire({
         title: 'Success!',
         text: 'User registered successfully!',
-        icon: 'success',
         confirmButtonText: 'OK',
+        imageUrl: tick, // Path to your checkmark image
+        imageWidth: 100, // Set width of the image
+        imageHeight: 100, // Set height of the image
+        imageAlt: 'Custom checkmark icon',
       });
       navigate('/home');
     } catch (error) {
@@ -77,7 +85,10 @@ const Signup = () => {
       setErrors(errorMsg);
       setTimeout(() => setErrors([]), 3000); // Clear errors after 3 seconds
       Swal.fire({
-        icon: 'error',
+        imageUrl: cross, // Path to your checkmark image
+        imageWidth: 200, // Set width of the image
+        imageHeight: 200, // Set height of the image
+        imageAlt: 'Custom checkmark icon',
         title: 'Oops...',
         text: error.message,
         confirmButtonText: 'OK'
@@ -106,7 +117,11 @@ const Signup = () => {
       Swal.fire({
         title: 'Success!',
         text: 'User signed in successfully!',
-        icon: 'success',
+        imageUrl: tick, // Path to your checkmark image
+        imageWidth: 200, // Set width of the image
+        imageHeight: 200, // Set height of the image
+        imageAlt: 'Custom checkmark icon',
+        confirmButtonText: 'OK',
       });
       navigate('/home');
     } catch (error) {
@@ -115,9 +130,12 @@ const Signup = () => {
       setErrors(errorMsg);
       setTimeout(() => setErrors([]), 3000); // Clear errors after 3 seconds
       Swal.fire({
-        icon: 'error',
         title: 'Oops...',
         text: error.message,
+        imageUrl: cross, // Path to your checkmark image
+        imageWidth: 200, // Set width of the image
+        imageHeight: 200, // Set height of the image
+        imageAlt: 'Custom checkmark icon',
       });
     } finally {
       setLoading(false);
@@ -130,10 +148,21 @@ const Signup = () => {
     try {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
-      window.Swal.fire({
-        icon: 'success',
-        title: 'Success!',
+      Swal.fire({
+        title: 'Success',
         text: 'User signed in successfully!',
+        confirmButtonText: 'OK',
+        imageUrl: tick, // Path to your checkmark image
+        imageWidth: 200, // Set width of the image
+        imageHeight: 200, // Set height of the image
+        imageAlt: 'Custom checkmark icon',
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown' // Add animation
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp' // Hide animation
+        },
+
       });
       navigate('/home');
     } catch (error) {
@@ -144,9 +173,12 @@ const Signup = () => {
       setTimeout(() => setErrors([]), 3000);
 
       window.Swal.fire({
-        icon: 'error',
         title: 'Oops...',
         text: `Error during sign in with provider: ${error.message}`,
+        imageUrl: cross, // Path to your checkmark image
+        imageWidth: 200, // Set width of the image
+        imageHeight: 200, // Set height of the image
+        imageAlt: 'Custom checkmark icon',
       });
     } finally {
       setLoading(false);
@@ -271,7 +303,7 @@ const Signup = () => {
           <div className="overlay-panel overlay-left">
             <img src={logo} alt="CodeWizards Logo" className="logo" />
             <h1>Welcome Back!</h1>
-            <p>Unlock your coding potential with CodeWizards: where creativity meets technology, and innovative ideas transform into powerful solutions for all.</p>
+            <p>Unlock your coding potential with CodeWizard: where creativity meets technology, and innovative ideas transform into powerful solutions for all.</p>
             <button className="ghost" id="signIn" onClick={() => setIsSignIn(true)}>
               Sign In
             </button>
@@ -279,7 +311,7 @@ const Signup = () => {
           <div className="overlay-panel overlay-right">
             <img src={logo} alt="CodeWizards Logo" className="logo" id="logo2" />
             <h1>Welcome</h1>
-            <p>Unlock your coding potential with CodeWizards: where creativity meets technology, and innovative ideas transform into powerful solutions for all.</p>
+            <p>Unlock your coding potential with CodeWizard: where creativity meets technology, and innovative ideas transform into powerful solutions for all.</p>
             <button className="ghost" id="signUp" onClick={() => setIsSignIn(false)}>
               Sign Up
             </button>
@@ -287,10 +319,10 @@ const Signup = () => {
         </div>
       </div>
 
-      <footer className="footer">
-        <p>
-          copyright © 2024 CodeWizards. All rights reserved |
-          <span style={{ margin: '0 5px' }}>Developed with ❤️ by CodeWizards Team.</span>
+      <footer className="footer bg-gray-800 text-white w-full h-12">
+        <p id="foot" className="text-center">
+          Copyright © 2024 CodeWizard. All rights reserved |
+          <span style={{ margin: '0 5px' }}>Developed with ❤️ by CodeWizard Team.</span>
         </p>
       </footer>
     </div>

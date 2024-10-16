@@ -52,7 +52,7 @@ const Contact = () => {
             <Navbar /> {/* Render Navbar component */}
 
             <h2 className="contact-heading">
-                Contact <span className="text-teal-500">Me!</span>
+                Contact <span className="text-teal-500">Us!</span>
             </h2>
 
             {/* Contact Form */}
@@ -122,8 +122,8 @@ const Contact = () => {
 
             <footer className="footer bg-gray-800 text-white w-full h-12">
                 <p id="foot" className="text-center">
-                    Copyright © 2024 CodeWizards. All rights reserved |
-                    <span style={{ margin: '0 5px' }}>Developed with ❤️ by CodeWizards Team.</span>
+                    Copyright © 2024 CodeWizard. All rights reserved |
+                    <span style={{ margin: '0 5px' }}>Developed with ❤️ by CodeWizard Team.</span>
                 </p>
             </footer>
         </section>

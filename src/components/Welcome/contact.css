@@ -44,6 +44,7 @@
     margin: 0.2rem 1rem;
     height: 2rem;
     border: none;
+    color:#fff;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -61,12 +62,13 @@ input[type="number"] {
     width: 52rem; /* Adjust width for input fields */
     height: 19rem; /* Keep the height of the textarea */
     padding: 1rem; /* Add some padding */
-    font-size: 1rem; /* Set a proper font size */
+    font-size: 0.8rem; /* Set a proper font size */
     background: #2e4871; /* Tailwind's gray-200 */
     border-radius: 0.5rem; /* Rounded corners */
     margin: 0.7rem 0; /* Margin for spacing */
     resize: none;
     outline: none; /* Disable resizing of textarea */
+    color:#fff;
 }
 
 .btn {

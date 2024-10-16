@@ -10,10 +10,10 @@ const About = () => {
             <Navbar />
             <div className="max-w-5xl mx-auto px-6">
                 <h2 className="text-4xl font-bold text-center mb-4">
-                    About <span className="text-teal-500">CodeWizards</span>
+                    About <span className="text-teal-500">CodeWizard</span>
                 </h2>
                 <p className="common-paragraph text-center">
-                    At CodeWizards, we are passionate about empowering aspiring coders and computer science students. Our platform offers a comprehensive environment for honing coding skills through interactive challenges, coding competitions, and extensive resources.
+                    At CodeWizard, we are passionate about empowering aspiring coders and computer science students. Our platform offers a comprehensive environment for honing coding skills through interactive challenges, coding competitions, and extensive resources.
                 </p>
                 <h3 className="text-2xl font-semibold mb-2">
                     Our Mission
@@ -34,13 +34,13 @@ const About = () => {
                     Join Us
                 </h3>
                 <p className="common-paragraph text-center">
-                    Whether you're just starting your coding journey or looking to refine your skills, CodeWizards is here to help. Join our community today and start coding your way to success!
+                    Whether you're just starting your coding journey or looking to refine your skills, CodeWizard is here to help. Join our community today and start coding your way to success!
                 </p>
             </div>
             <footer className="footer bg-gray-800 text-white w-full h-12">
                 <p id="foot" className="text-center">
-                    Copyright © 2024 CodeWizards. All rights reserved |
-                    <span style={{ margin: '0 5px' }}>Developed with ❤️ by CodeWizards Team.</span>
+                    Copyright © 2024 CodeWizard. All rights reserved |
+                    <span style={{ margin: '0 5px' }}>Developed with ❤️ by CodeWizard Team.</span>
                 </p>
             </footer>
         </section>

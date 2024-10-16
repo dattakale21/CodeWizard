@@ -278,6 +278,11 @@ input:focus {
   width: 100%;
 }
 
+.password-container input:focus{
+  outline: none;
+  border-color: #FF4B2B;
+}
+
 .password-container input {
   background-color: #eee;
   border: 1px solid transparent;
