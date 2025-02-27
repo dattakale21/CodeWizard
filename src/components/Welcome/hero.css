@@ -2,7 +2,7 @@
 
 /* Background image that covers the entire page */
 .hero {
-    background-image: url('./welcomebg.jpg');
+    background-image: url('../assets/welcomebg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -10,7 +10,7 @@
     width: 100vw;
     position: relative;
     display: flex;
-    flex-direction: column; /* Flex to stack items */
+    flex-direction: column; 
     font-weight: bold;
 }
 
@@ -69,7 +69,7 @@
 .contact-section {
     padding-top: 5rem;
     padding-bottom: 17rem;
-    background-image: url('./welcomebg.jpg');
+    background-image: url('../assets/welcomebg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -140,11 +140,14 @@
 
 .about p {
     font-size: 1rem; /* Font size for paragraphs */
-    margin-top: -0.4rem; /* Adjust top margin */
+    margin-top:-0.7rem;
+}
+.about h3{
+    margin-top:-0.6rem;
 }
 
 .about h2 {
-    margin-top: 5rem; /* Margin for headings */
+    margin-top: 6rem; /* Margin for headings */
     color: #fff; /* Text color */
 }
 

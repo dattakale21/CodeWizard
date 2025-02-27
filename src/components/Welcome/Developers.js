@@ -5,8 +5,8 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import Navbar from './Navbar';
 import "./developer.css"; // Import the CSS file for styling
 import "./hero.css"; // Import the CSS file for styling
-import dattaImage from './datta.png';
-import samiImage from './sami.png';
+import dattaImage from '../assets/datta.png';
+import samiImage from '../assets/sami.png';
 
 
 const developersData = [
@@ -153,12 +153,7 @@ const Developers = () => {
           </div>
         ))}
       </div>
-      <footer className="footer bg-gray-800 text-white w-full h-12">
-        <p id="foot" className="text-center">
-          Copyright © 2024 CodeWizards. All rights reserved |
-          <span style={{ margin: '0 5px' }}>Developed with ❤️ by CodeWizard Team.</span>
-        </p>
-      </footer>
+
     </div>
   );
 };

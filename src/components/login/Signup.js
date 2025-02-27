@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import './Signup.css';
 import Swal from 'sweetalert2';
-import logo from './cw.png';
-import tick from './tick.png';
-import cross from './cross.png';
+import logo from '../assets/cw.png';
+import tick from '../assets/tick.png';
+import cross from '../assets/cross.png';
+import launch from '../landingPage/LaunchPage';
 import {
   auth,
   googleProvider,
@@ -50,53 +51,47 @@ const Signup = () => {
 
   const handleSignUp = async (e) => {
     e.preventDefault();
-    setErrors([]); // Reset error messages
-
+    setErrors([]); // Clear old errors
+  
     if (password !== confirmPassword) {
-      const errorMsg = ["Passwords do not match."];
-      setErrors(errorMsg);
-      setTimeout(() => setErrors([]), 3000); // Clear errors after 3 seconds
+      setErrors(["Passwords do not match."]);
       return;
     }
-
+  
     const validationErrors = validatePassword(password);
     if (validationErrors.length > 0) {
       setErrors(validationErrors);
-      setTimeout(() => setErrors([]), 3000); // Clear errors after 3 seconds
       return;
     }
-
+  
     try {
       setLoading(true);
       await createUserWithEmailAndPassword(auth, email, password);
-      window.Swal.fire({
+      Swal.fire({
         title: 'Success!',
         text: 'User registered successfully!',
         confirmButtonText: 'OK',
-        imageUrl: tick, // Path to your checkmark image
-        imageWidth: 100, // Set width of the image
-        imageHeight: 100, // Set height of the image
+        imageUrl: tick,
+        imageWidth: 100,
+        imageHeight: 100,
         imageAlt: 'Custom checkmark icon',
       });
-      navigate('/home');
+      navigate('/launch');
     } catch (error) {
-      console.error("Sign Up Error: ", error.message);
-      const errorMsg = [error.message];
-      setErrors(errorMsg);
-      setTimeout(() => setErrors([]), 3000); // Clear errors after 3 seconds
+      setErrors([error.message]);
       Swal.fire({
-        imageUrl: cross, // Path to your checkmark image
-        imageWidth: 200, // Set width of the image
-        imageHeight: 200, // Set height of the image
-        imageAlt: 'Custom checkmark icon',
         title: 'Oops...',
         text: error.message,
-        confirmButtonText: 'OK'
+        imageUrl: cross,
+        imageWidth: 200,
+        imageHeight: 200,
+        imageAlt: 'Error icon',
       });
     } finally {
       setLoading(false);
     }
   };
+  
 
   // ------------------- SIGN IN ---------------------
 
@@ -123,7 +118,7 @@ const Signup = () => {
         imageAlt: 'Custom checkmark icon',
         confirmButtonText: 'OK',
       });
-      navigate('/home');
+      navigate('/launch');
     } catch (error) {
       console.error("Sign In Error: ", error.message);
       const errorMsg = [error.message];
@@ -164,14 +159,14 @@ const Signup = () => {
         },
 
       });
-      navigate('/home');
+      navigate('/launch');
     } catch (error) {
       console.error("Provider Sign In Error: ", error);
       const errorMsg = [`Error during sign in with provider: ${error.message}`];
       setErrors(errorMsg);
       // Clear errors after 3 seconds
       setTimeout(() => setErrors([]), 3000);
-
+ 
       window.Swal.fire({
         title: 'Oops...',
         text: `Error during sign in with provider: ${error.message}`,
@@ -190,7 +185,7 @@ const Signup = () => {
     <div className={`container ${isSignIn ? '' : 'right-panel-active'}`} id="container">
       <div className="form-container sign-up-container">
         <form onSubmit={handleSignUp}>
-          <h1>Create Account</h1>
+          <h1 class="create_account">Create Account</h1>
           <div className="social-container">
             <a href="#" className="social" onClick={() => signInWithProvider(facebookProvider)}>
               <i className="fab fa-facebook-f"></i>
@@ -319,12 +314,6 @@ const Signup = () => {
         </div>
       </div>
 
-      <footer className="footer bg-gray-800 text-white w-full h-12">
-        <p id="foot" className="text-center">
-          Copyright © 2024 CodeWizard. All rights reserved |
-          <span style={{ margin: '0 5px' }}>Developed with ❤️ by CodeWizard Team.</span>
-        </p>
-      </footer>
     </div>
   );
 };

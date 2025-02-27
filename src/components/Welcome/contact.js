@@ -120,12 +120,6 @@ const Contact = () => {
                 />
             </form>
 
-            <footer className="footer bg-gray-800 text-white w-full h-12">
-                <p id="foot" className="text-center">
-                    Copyright © 2024 CodeWizard. All rights reserved |
-                    <span style={{ margin: '0 5px' }}>Developed with ❤️ by CodeWizard Team.</span>
-                </p>
-            </footer>
         </section>
     );
 };

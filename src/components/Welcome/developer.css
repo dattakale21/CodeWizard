@@ -25,7 +25,7 @@ body {
   background-color: #f0f4f8;
   width: 100vw;
   overflow-y: auto; /* Enable vertical scrolling */
-  background-image: url('./welcomebg.jpg');
+  background-image: url('../assets/welcomebg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
